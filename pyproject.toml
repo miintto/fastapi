@@ -2,18 +2,17 @@
 name = "fastapi-was"
 version = "0.1.0"
 description = ""
-authors = ["miintto <minjp93@gmail.com>"]
+authors = ["miintto <miintto.log@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-requests = "^2.26.0"
-uvicorn = "^0.15.0"
-pydantic = "^1.8.2"
-fastapi = "^0.70.0"
-SQLAlchemy = "^1.4.27"
-psycopg2 = "^2.9.2"
-PyJWT = "^2.3.0"
-bcrypt = "^3.2.0"
+python = "^3.10"
+fastapi = "^0.82.0"
+uvicorn = "^0.18.3"
+SQLAlchemy = "^1.4.41"
+PyJWT = "^2.4.0"
+bcrypt = "^4.0.0"
+psycopg2 = "^2.9.3"
+python-dotenv = "^0.21.0"
 
 [tool.poetry.dev-dependencies]
 
