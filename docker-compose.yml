@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:1.21.6
+    ports:
+      - 8081:80
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - fastapi
+
+  fastapi:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+    ports:
+      - 8000:8000
+    volumes:
+      - ./logs/:/usr/src/logs/
+      - ./.env.local:/usr/src/.env
+    environment:
+      APP_ENV: local
